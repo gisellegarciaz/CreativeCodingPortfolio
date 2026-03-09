@@ -36,6 +36,12 @@ export const GlassHeader = styled.header`
   border: 1px solid rgba(255,255,255,0.12);
 
   z-index: 100;
+
+  &:hover {
+    background: rgba(50, 8, 85, 0.5);
+    border: none;
+    box-shadow: 0 0 10px rgba(11, 5, 31, 0.61);
+  }
 `;
 
 export const Nav = styled.nav`

@@ -6,10 +6,10 @@ export const CursorDot = styled.div`
     top: ${({ $y }) => $y}px;
     left: ${({ $x }) => $x}px;
 
-    width: ${({ $hover }) => ($hover ? "50px" : "24px")};
-    height: ${({ $hover }) => ($hover ? "50px" : "24px")};
+    width: ${({ $hover }) => ($hover ? "10px" : "40px")};
+    height: ${({ $hover }) => ($hover ? "10px" : "40px")};
 
-    background: rgba(139, 92, 246, 0.1);;
+    background: ${({ $hover }) => ($hover ? "rgba(139, 92, 246, 1)" : "rgba(139, 92, 246, 0.1)")};
 
     border: 2px solid #8b5cf6;
 
