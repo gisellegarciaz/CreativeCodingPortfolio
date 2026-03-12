@@ -1,39 +1,58 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    :root {
+        --bg-deep: #091122;          /* Espaço profundo */
+        --bg-main: #1a0b2e;          /* Roxo base */
+        --bg-surface: #262551;       /* Superfície/Cards */
+        --color-primary: #735293;    /* Roxo médio */
+        --color-secondary: #3b333e;  /* Cinza arroxeado */
+        --color-accent: #8e86c7;     /* Lavanda brilhante (Links/Botões) */
+        --color-ocean: #283483;      /* Azul galáxia */
+        
+        --text-main: #ffffff;
+        --text-dim: #d0c9ff;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     body {
         width: 100%;
         overflow-x: hidden;
-        background-color: #1a0b2e; /* Roxo inicial do seu case */
-        color: white;
+        background-color: var(--bg-main);
+        color: var(--text-main);
         cursor: none;
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-
-        :hover {
-            cursor: none;}
     }
 
-    /* Opcional: Estilização da scrollbar para combinar com a estética da galáxia */
+    a {
+        color: var(--color-accent);
+        text-decoration: none;
+        transition: filter 0.3s ease;
+
+        &:hover {
+        filter: brightness(1.2);
+        }
+    }
+
     ::-webkit-scrollbar {
         width: 8px;
     }
     ::-webkit-scrollbar-track {
-        background: #050a1a;
+        background: var(--bg-deep);
     }
     ::-webkit-scrollbar-thumb {
-        background: #4b2c71;
+        background: var(--color-primary);
         border-radius: 10px;
     }
     ::-webkit-scrollbar-thumb:hover {
-        background: #6a3ea1;
+        background: var(--color-accent);
     }
 `;
 
