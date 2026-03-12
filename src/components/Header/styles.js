@@ -4,7 +4,10 @@ export const GlassHeader = styled.header`
   position: fixed;
   top: ${({ $scrolled }) => ($scrolled ? "16px" : "32px")};
   left: 50%;
-  transform: translateX(-50%);
+
+  transform: translateX(-50%) translateY(-100px); 
+  opacity: 0;
+  
   padding: 10px 30px;
   border-radius: 999px;
   backdrop-filter: blur(20px);
