@@ -1,6 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
+import UrbanistBlack from '../assets/fonts/Urbanist-Black.ttf'
 
 const GlobalStyle = createGlobalStyle`
+    @font-face {
+        font-family: 'Urbanist';
+        src: url(${UrbanistBlack}) format('truetype');
+        font-weight: 900;
+        font-style: normal;
+    }
+
     :root {
         --bg-deep: #091122;          /* Espaço profundo */
         --bg-main: #1a0b2e;          /* Roxo base */
@@ -21,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        font-family: 'Urbanist', sans-serif;
         width: 100%;
         overflow-x: hidden;
         background-color: var(--bg-main);

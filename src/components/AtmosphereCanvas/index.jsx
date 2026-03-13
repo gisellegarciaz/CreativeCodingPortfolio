@@ -29,7 +29,7 @@ const AtmosphereCanvas = () => {
     return (
         <MainContainer ref={containerRef}>
             <ContentSection>
-                <h2>Role para baixo para ver a transição</h2>
+                <h2>Parte</h2>
             </ContentSection>
             <ContentSection>
                 <h2>parte 2</h2>
