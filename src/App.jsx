@@ -14,6 +14,7 @@ function App() {
     <>
       <GlobalStyle />
       <Cursor />
+      
 
       <MainBody>
         <MainContent>

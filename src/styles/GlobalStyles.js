@@ -1,11 +1,19 @@
 import { createGlobalStyle } from 'styled-components';
 import UrbanistBlack from '../assets/fonts/Urbanist-Black.ttf'
+import ZcoolFont from '../assets/fonts/ZCOOLQingKeHuangYou-Regular.ttf';
 
 const GlobalStyle = createGlobalStyle`
     @font-face {
         font-family: 'Urbanist';
         src: url(${UrbanistBlack}) format('truetype');
         font-weight: 900;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Zcool';
+        src: url(${ZcoolFont}) format('truetype');
+        font-weight: normal;
         font-style: normal;
     }
 
@@ -35,7 +43,6 @@ const GlobalStyle = createGlobalStyle`
         background-color: var(--bg-main);
         color: var(--text-main);
         cursor: none;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }

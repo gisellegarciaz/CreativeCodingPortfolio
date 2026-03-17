@@ -14,6 +14,8 @@ import {
     MarqueeContent,
 } from "./styles";
 
+import Scene from "../Canvas/scene";
+
 /* Stickers principais */
 
 import G1_Img from "../../assets/sticker/sticker-g1@2x.png";
@@ -300,7 +302,7 @@ export default function StickersIntro({ onComplete }) {
             })
 
                 .to(boomRef.current, {
-                    scale: 1.8,
+                    scale: 1.3,
                     duration: 0.25,
                     ease: "expo.out"
                 })
@@ -385,19 +387,25 @@ export default function StickersIntro({ onComplete }) {
                 ))}
             </GiantTextContainer>
 
-            <LiquidBg>
+            {/* <LiquidBg>
                 <Blob $color="#735293" $top="-10%" $left="-10%" $duration="15s" $delay="0s" />
                 <Blob $color="#283483" $top="50%" $left="60%" $duration="18s" $delay="-2s" />
                 <Blob $color="#8e86c7" $top="20%" $left="30%" $duration="12s" $delay="-5s" />
                 <Blob $color="#262551" $top="70%" $left="10%" $duration="20s" $delay="-3s" />
-            </LiquidBg>
+            </LiquidBg> */}
+
+            <Scene />
 
             <MarqueeContainer className="marquee-container">
                 <MarqueeContent>
-                    {[1, 2, 3, 4].map(n => (
-                        <span key={n}>
-                            CREATIVE CODING • POWERFUL DESIGN • FRONT-END • UI/UX •
-                        </span>
+                    {[1, 2].map((loop) => (
+                        <React.Fragment key={loop}>
+                            {[1, 2, 3, 4].map(n => (
+                                <span key={n}>
+                                    POWERFUL DESIGN  •  CREATIVE CODING  •  FRONT-END  •  UI/UX  •  POWERFUL DESIGN  •  CREATIVE CODING  •  FRONT-END  •  UI/UX  •
+                                </span>
+                            ))}
+                        </React.Fragment>
                     ))}
                 </MarqueeContent>
             </MarqueeContainer>

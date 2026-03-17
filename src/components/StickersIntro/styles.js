@@ -46,25 +46,45 @@ export const Char = styled.span`
 `;
 
 export const MarqueeContainer = styled.div`
-    position: absolute;
-    bottom: 15%;
+    position: fixed;
+    bottom: 25px;
+    left: 0;
     width: 100%;
+    height: 60px;
+
+    background: rgba(138, 43, 226, 0.2);
+    backdrop-filter: blur(10px);
+    transform: rotate(-1deg) scale(1.02);
+    display: flex;
+    align-items: center;
+    
     overflow: hidden;
     white-space: nowrap;
-    opacity: 0.3;
-    z-index: 1;
+    z-index: 10;
+    
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 `;
 
 export const MarqueeContent = styled.div`
     display: inline-block;
-    animation: ${scroll} 20s linear infinite;
-    font-family: 'Inter', sans-serif;
+    animation: ${scroll} 40s linear infinite;
+    font-family: 'Zcool', sans-serif;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 2rem;
-    color: var(--text-color);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: #fff;
+    width: max-content;
+    flex-shrink: 0;
+    will-change: transform;
     
-    span { margin-right: 2rem; }
+    span { 
+        margin-right: 0; 
+        padding: 0 3rem;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        white-space: nowrap;
+        padding: 0 2rem;
+    }
 `;
 
 export const LiquidBg = styled.div`
