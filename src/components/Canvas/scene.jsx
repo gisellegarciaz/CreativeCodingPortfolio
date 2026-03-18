@@ -12,12 +12,15 @@ const Scene = () => {
             width: '100vw',
             height: '100vh',
             zIndex: -1,
-            background: '#050010' // Fundo escuro para destacar o brilho
+            pointerEvents: 'none',
+            background: 'transparent' 
         }}>
             <Canvas
                 camera={{ position: [0, 0, 5], fov: 45 }}
-                dpr={[1, 2]} // Otimização de performance para telas Retina
+                dpr={1} 
+                gl={{ alpha: true, antialias: true, powerPreference: "high-performance" }}
             >
+                <color attach="background" args={[null]} />
                 <Suspense fallback={null}>
                     {/* Iluminação que cria o contraste metálico */}
                     <ambientLight intensity={0.4} />

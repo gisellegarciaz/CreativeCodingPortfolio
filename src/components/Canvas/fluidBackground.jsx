@@ -33,7 +33,7 @@ const FluidBackground = () => {
     });
 
     return (
-        <Sphere ref={meshRef} args={[1.5, 128, 128]} scale={1.8}>
+        <Sphere ref={meshRef} args={[1.5, 64, 64]} scale={1.8}>
             <MeshDistortMaterial
                 color="#3d007a"      // Roxo base profundo
                 speed={3}            // Velocidade da "pulsação" das ondas
