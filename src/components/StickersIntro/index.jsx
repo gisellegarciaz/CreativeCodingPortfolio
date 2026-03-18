@@ -8,9 +8,11 @@ import {
     LottieWrapper
 } from './styles';
 
+import SkipButton from "../ButtonSkip";
 import GiantText from "../GiantText";
 import LiquidBg from "../LiquidBg";
-import IntroVideo from "../../assets/video/IntroMotion.mp4";
+import IntroVideoApple from "../../assets/video/IntroMotion.mp4";
+import IntroVideoStandard from "../../assets/video/IntroMotion.mp4";
 // import Scene from "../Canvas/scene";
 // const Scene = lazy(() => import("../Canvas/scene"));
 
@@ -50,6 +52,12 @@ export default function StickersIntro({ onComplete }) {
             {/* <Suspense fallback={null}>
                 <Scene />
             </Suspense> */}
+
+            <SkipButton onClick={() => {
+                localStorage.setItem('hasSeenIntro', 'true');
+                onComplete();
+            }} />
+
             <MarqueeContainer className="marquee-container">
                 <MarqueeContent>
                     {[1, 2].map(n => (
@@ -71,11 +79,12 @@ export default function StickersIntro({ onComplete }) {
                     transform: 'translate(-50%, -50%) translateZ(0)',
                     width: '80%',
                     zIndex: 99,
+                    // mixBlendMode: 'screen',
                     pointerEvents: 'none'
-                    // mixBlendMode: 'screen'
                 }}
             >
-                <source src={IntroVideo} type="video/mp4" />
+                <source src={IntroVideoApple} type="video/mp4" />
+                {/* <source src={IntroVideoStandard} type="video/mp4" /> */}
                 Seu navegador não suporta o vídeo.
             </video>
         </IntroContainer>
