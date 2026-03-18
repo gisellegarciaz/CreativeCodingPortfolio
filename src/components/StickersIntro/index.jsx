@@ -10,7 +10,7 @@ import {
 
 import SkipButton from "../ButtonSkip";
 import GiantText from "../GiantText";
-import LiquidBg from "../LiquidBg";
+import LiquidBg from "../BackgroundLiquid";
 import IntroVideoApple from "../../assets/video/IntroMotion.mp4";
 import IntroVideoStandard from "../../assets/video/IntroMotion.mp4";
 // import Scene from "../Canvas/scene";
