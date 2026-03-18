@@ -40,11 +40,14 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Urbanist', sans-serif;
         width: 100%;
         overflow-x: hidden;
-        background-color: var(--bg-main);
         color: var(--text-main);
         cursor: none;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+    }
+
+    html, body, #root {
+    background-color: var(--bg-main) !important;
     }
 
     a {
