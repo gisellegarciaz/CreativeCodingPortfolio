@@ -1,27 +1,30 @@
 import styled from 'styled-components';
 
 export const RewatchBtn = styled.button`
-    position: fixed;
-    top: 32px; 
-    right: 200px;
-    z-index: 500;
+    position: relative;
+    padding: 25px 10px; 
+    border-radius: 999px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.4);
-    
+    color: rgba(255, 255, 255, 0.5);
     font-family: 'Urbanist', sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 1px;
-    
-    padding: 10px 30px;
-    border-radius: 25px;
+    text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease;
+    white-space: nowrap;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
         color: white;
-        border-color: #8a2be2; 
-        background: rgba(138, 43, 226, 0.1);
+        background: rgba(50, 8, 85, 0.5);
+        border-color: rgba(138, 43, 226, 0.3);
+        transform: scale(1.02);
     }
 `;
