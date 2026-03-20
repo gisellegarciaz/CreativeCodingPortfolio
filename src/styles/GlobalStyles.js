@@ -18,16 +18,17 @@ const GlobalStyle = createGlobalStyle`
     }
 
     :root {
-        --bg-deep: #091122;          /* Espaço profundo */
-        --bg-main: #1a0b2e;          /* Roxo base */
-        --bg-surface: #262551;       /* Superfície/Cards */
-        --color-primary: #735293;    /* Roxo médio */
-        --color-secondary: #3b333e;  /* Cinza arroxeado */
-        --color-accent: #8e86c7;     /* Lavanda brilhante (Links/Botões) */
-        --color-ocean: #283483;      /* Azul galáxia */
-        
-        --text-main: #ffffff;
-        --text-dim: #d0c9ff;
+        --bg-deep: #070B1F;          /* Azul quase preto (mais profundo e elegante) */
+        --bg-main: #0F1A4B;          /* Azul royal escuro dominante */
+        --bg-surface: #1C2A7A;       /* Superfície com leve vibração azul-violeta */
+
+        --color-primary: #5B3FD9;    /* Roxo vibrante principal */
+        --color-secondary: #2A2F5E;  /* Azul arroxeado neutro */
+        --color-accent: #FF4FD8;     /* Rosa neon (highlight da imagem) */
+        --color-ocean: #2F6BFF;      /* Azul elétrico glow */
+
+        --text-main: #F5F7FF;        /* Branco levemente frio */
+        --text-dim: #B8C0FF;         /* Lavanda suave */
     }
 
     * {
