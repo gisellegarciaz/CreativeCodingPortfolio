@@ -11,6 +11,7 @@ import {
 import SkipButton from "../ButtonSkip";
 import GiantText from "../GiantText";
 import LiquidBg from "../BackgroundLiquid";
+import BgVideo from "../../assets/video/FluidVid3.mp4";
 import IntroVideoApple from "../../assets/video/IntroMotion.mp4";
 import IntroVideoStandard from "../../assets/video/IntroMotion.mp4";
 // import Scene from "../Canvas/scene";
@@ -19,6 +20,7 @@ import IntroVideoStandard from "../../assets/video/IntroMotion.mp4";
 export default function StickersIntro({ onComplete }) {
     const containerRef = useRef(null);
     const videoRef = useRef(null);
+    const backgroundRef = useRef(null);
     const lottieRef = useRef(null);
     const [videoEnded, setVideoEnded] = useState(false);
 
@@ -47,8 +49,28 @@ export default function StickersIntro({ onComplete }) {
 
     return (
         <IntroContainer ref={containerRef}>
-            <LiquidBg />
-            <GiantText />
+            {/* <LiquidBg /> */}
+            <video
+                ref={backgroundRef}
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover', // Garante que preencha tudo sem distorcer
+                    zIndex: -1, // Fica atrás de tudo
+                    opacity: 0.6 // Suave para não brigar com os stickers
+                }}
+            >
+                <source src={BgVideo} type="video/mp4" />
+            </video>
+
+            {/* <GiantText /> */}
             {/* <Suspense fallback={null}>
                 <Scene />
             </Suspense> */}
