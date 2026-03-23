@@ -9,7 +9,7 @@ const ButtonRewatch = () => {
 
     return (
         <RewatchBtn onClick={handleRewatch}>
-            Rewatch Intro
+            Rewatch <br />Intro
         </RewatchBtn>
     );
 };

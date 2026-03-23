@@ -5,10 +5,10 @@ export const RewatchBtn = styled.button`
     padding: 25px 10px; 
     border-radius: 999px;
     backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.12);
     
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
     font-family: 'Urbanist', sans-serif;
     font-size: 10px;
     letter-spacing: 1px;
@@ -23,7 +23,7 @@ export const RewatchBtn = styled.button`
 
     &:hover {
         color: white;
-        background: rgba(50, 8, 85, 0.5);
+        background: var(--color-accent);
         border-color: rgba(138, 43, 226, 0.3);
         transform: scale(1.02);
     }
