@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "../../components/Header";
+import Manifesto from "../../components/Manifesto";
 import FluidVid from "../../assets/video/FluidVid2.mp4";
 import {
     MainScene,
@@ -28,7 +29,7 @@ export default function Homepage() {
                 scrollTrigger: {
                     trigger: sceneRef.current,
                     start: "top top",
-                    end: "+=120%",
+                    end: "+=150%",
                     scrub: 1.5, 
                     pin: true,
                 },
@@ -87,7 +88,9 @@ export default function Homepage() {
                 </FolderMask>
             </StickyContainer>
 
-            <NextSection />
+            <NextSection>
+                <Manifesto />
+            </NextSection>
         </MainScene>
     );
 }

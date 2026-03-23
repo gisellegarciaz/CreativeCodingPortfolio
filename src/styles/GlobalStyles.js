@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 import UrbanistBlack from '../assets/fonts/Urbanist-Black.ttf'
 import ZcoolFont from '../assets/fonts/ZCOOLQingKeHuangYou-Regular.ttf';
+import AnovaFont from '../assets/fonts/AnovaDEMO-Regular.otf';
+
 
 const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -13,6 +15,13 @@ const GlobalStyle = createGlobalStyle`
     @font-face {
         font-family: 'Zcool';
         src: url(${ZcoolFont}) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Anova';
+        src: url(${AnovaFont}) format('truetype');
         font-weight: normal;
         font-style: normal;
     }

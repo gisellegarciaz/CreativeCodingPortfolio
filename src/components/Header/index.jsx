@@ -51,9 +51,9 @@ export default function Header({ startAnimation }) {
 
                 <Nav $scrolled={scrolled}>
                     <NavLink SvgIcon={CircleSvg} href="#">Home</NavLink>
-                    <NavLink SvgIcon={WavySvg} href="#">CV</NavLink>
                     <NavLink SvgIcon={CloudSvg} href="#">Portfolio</NavLink>
                     <NavLink SvgIcon={RectSvg} href="#">Contact Me</NavLink>
+                    <NavLink SvgIcon={WavySvg} href="#">CV</NavLink>
                 </Nav>
             </GlassHeader>
             <ButtonRewatch />
