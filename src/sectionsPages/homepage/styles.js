@@ -28,7 +28,7 @@ export const FolderMask = styled.div`
     align-items: center;
     justify-content: center;
     
-    background: #050533;
+    background: #9b9bcbff;
 
     .video-bg {
         position: absolute;
@@ -55,4 +55,74 @@ export const NextSection = styled.section`
     padding: 100px;
     display: flex;
     align-items: center;
+`;
+
+export const FooterContainer = styled.section`
+    width: 100%;
+    min-height: 100vh;
+    padding: 8rem 6rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    background: var(--color-primary);
+`;
+
+export const FooterLeft = styled.div`
+    flex: 1;
+    height: 100%;
+
+    /* placeholder invisível por enquanto */
+`;
+
+export const FooterRight = styled.div`
+    width: 320px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    text-align: left;
+`;
+
+export const FooterText = styled.p`
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.7;
+`;
+
+export const SocialButtons = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    a {
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0%;
+            height: 1px;
+            background: currentColor;
+            transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
 `;

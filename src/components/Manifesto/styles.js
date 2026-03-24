@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -11,6 +12,8 @@ export const Section = styled.section`
 
 export const TextWrapper = styled.div`
     max-width: 1000px;
+    position: relative;
+    z-index: 2;
 `;
 
 export const Line = styled.p`
@@ -20,7 +23,6 @@ export const Line = styled.p`
     margin: 0;
     letter-spacing: -0.02em;
 
-    transform: translateX(0);
     transition: transform 0.5s ease;
 
     &.space {
@@ -30,5 +32,20 @@ export const Line = styled.p`
     strong {
         color: var(--color-accent);
         font-weight: 500;
+        font-size: 3.5rem;
+    }
+`;
+
+export const SplineOverlay = styled.div`
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+
+    pointer-events: none;
+
+    canvas {
+        width: 100% !important;
+        height: 100% !important;
+        opacity: 0.85;
     }
 `;
